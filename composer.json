@@ -1,0 +1,30 @@
+{
+    "name": "sailantis/laravel-volucer",
+    "description": "Run a Laravel application on volucer's persistent worker protocol.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.2",
+        "sailantis/volucer-worker": "dev-main",
+        "illuminate/contracts": "^11.0 || ^12.0",
+        "illuminate/http": "^11.0 || ^12.0",
+        "illuminate/routing": "^11.0 || ^12.0"
+    },
+    "require-dev": {
+        "laravel/framework": "^11.0 || ^12.0",
+        "phpunit/phpunit": "^10.5"
+    },
+    "repositories": [
+        { "type": "path", "url": "../volucer-php-sdk" }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": { "Sailantis\\LaravelVolucer\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Sailantis\\LaravelVolucer\\Tests\\": "tests/" }
+    },
+    "config": { "sort-packages": true },
+    "scripts": { "test": "phpunit" }
+}
